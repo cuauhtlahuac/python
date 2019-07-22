@@ -55,10 +55,11 @@ print("finish dynamic array")
 # https://www.python-course.eu/python3_global_vs_local_variables.php
 
 def dynamicArray(n, queries):
-    # Write your code here
+# Write your code here
 # Create an integer, lastAnswer , and initialize it to 0.
     global lastAnswer
     lastAnswer = 0
+    printAnswer = []
     # create append variable to say the current value of y
     append = 0
     # 2 types of queries
@@ -74,9 +75,9 @@ def dynamicArray(n, queries):
         # Find the value of element y% in size in seq and assign it to lastAnswer.
         index = y % len(sequenses[seq])
         lastAnswer = int(sequenses[seq][index])
+        printAnswer.append(lastAnswer)
         # print value of lastAnswer
-        print(lastAnswer)
-        #print("WTF")
+        #print(lastAnswer)
     # Create n sequences variables
     sequenses = {}
     for nseq in range(0, 2):
@@ -89,3 +90,51 @@ def dynamicArray(n, queries):
             query_one(x, y)
         if current_query == 2:
             query_two(x, y)  
+    return printAnswer
+
+
+new input = 
+100000 100000
+1 740048951 924919680
+1 129818301 12799555
+1 330533820 889201598
+1 197125749 318174700
+1 603690888 520006188
+1 4559415 906633769
+1 353263281 296658390
+1 976488274 768390744
+1 922946810 485631967
+1 5666709 189571204
+1 867874724 454534422
+1 391523798 243557156
+1 567333065 132409353
+1 216021110 64927271
+1 326096796 123561806
+1 725248096 920547678
+1 954443987 784730066
+1 674840519 183463026
+1 694919598 143106131
+# {-truncated-}
+
+new output = 
+440552560
+321691100
+21075956
+727198126
+251468495
+866420844
+204296234
+627037796
+256702893
+242481312
+431091665
+923578431
+94673176
+891979511
+827153086
+932513768
+846438092
+63858795
+291131405
+192832422
+#{-truncated-}
